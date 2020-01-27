@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background: linear-gradient(to right, #C7B2F6, #A0F389)">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<nav class="navbar navbar-light" style="background-color: #e3f2fd; justify-content-between">
+ <i class="fa fa-eye fa-2x" aria-hidden="true">Examination System</i>
+<i class="fa fa-sign-out fa-lg" aria-hidden="true"><a href="/logout">Sign Out</a></i></nav>
+<div class="container">
+
+
+<br><br>
+<!-- <div class="card text-center">
+  <div class="card-header">
+   <b style="font-size: 25px;"> All The Best </b>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">About The Exam</h5>
+    <p class="card-text">The Exam Contains 60 munute of time and 30 questions, 1.5 min per question. All the questions are multiple choice questions you can choose one answer from the 4 choice, at the end you will get the result of your test</p>
+    <a href="/exam/1" class="btn btn-primary">Start Exam</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+</div> -->
+
+
+
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+       <a href="/exam/1" class="btn btn-primary" onclick="submit()">Start Exam</a>
+      </li>
+      <li class="nav-item">
+         <a class="btn btn-danger" href="/result">My Result</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">About The Exam</h5>
+    <p class="card-text">All The questions are multiple choice questions, students have to Choose any one of the four options. The Exam contains 20 questions  student must attend all the questions which are availaible on the exam. Student can get instant result after completion of the exam. </p>
+       <a href="/exam/1" class="btn btn-primary" name="exam" onclick="submit()">Start Exam</a>
+  </div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  function submit()
+  {
+    alert("Are you sure---!!");
+  }
+</script>
+
+
+</body>
+</html>

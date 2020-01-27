@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <body style="background: linear-gradient(to right, #C7B2F6, #A0F389);"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="stylesheet/js/bootstrap.min.js"></script>
+
+<!-- 
+<form action="/exam" method="POST">
+<input  type="" name="qid" id="qid"><br>
+<input type="" name="qname" id="qname"><br>
+<input type="" name="answer1" id="answer1"><br>
+<input type="" name="answer2" id="answer2"><br>
+<input type="" name="answer3" id="answer3"><br>
+<input type="" name="answer4" id="answer4"><br></form>
+
+ 
+!-->
+
+<body style="color: white;">
+
+<div id="txt"></div>
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+  var t = setTimeout(function(){ startTime() }, 500);
+}
+
+function //checkTime(i) {
+  if (i  10) {
+    i = "0" + i;
+  }
+  return i;
+}
+</script>
+
+<form action="/exam/:id" method="POST">
+<div class="card" style="background-color: transparent;">
+  <h5 class="card-header">Please Answer All The Below Question</h5>
+  </div>
+
+  <div class="line" style="background-color: white; width: 100%;height: 2%;"></div><br><br>
+
+    
+  	<div class="container">	
+    <h5 class="card-title">
+
+
+    <% results.forEach(function(question){ %>
+
+    <input type="hidden" name="id" value="<%= question.qid%>">
+    <input type="hidden" name="answer" value="<%= question.answer%>"> 
+    <input type="hidden" name="qid" value="<%= question.qid %>"><b><%= question.qid %>.. <label style="color: #BBF3B4;"><%= question.qname %></label></b><br><br>
+
+    <p class="card-text">
+      <input type="radio" name="Ans" value="1" required> <b><%= question.answer1 %> </b><br>
+<input type="radio" name="Ans" value="2" required> <b><%= question.answer2 %></b> <br>
+<input type="radio" name="Ans" value="3" required> <b><%= question.answer3 %></b> <br>
+<input type="radio" name="Ans" value="4" required> <b><%= question.answer4 %></b> <br>
+
+
+   
+   <% if (question.qid == 20) { -%>
+     <a href="/result" class="btn btn-success">Finish </a>
+   <% } else { -%>
+     <input type="submit" class="btn btn-primary" value="Next">
+   <% } -%>
+
+
+<% });  %></p>
+     
+ 
+</form>
+
+
+
+<style type="text/css">
+    body,html{
+        background-image: url("https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+       /* width: 100%;
+        height: 100%;*/
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+
+</body>
+</head>
+</html>

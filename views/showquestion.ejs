@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body style="background: linear-gradient(to right, #C7B2F6, #A0F389);">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="stylesheet/js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="https://icon-library.net/images/admin-icon-png/admin-icon-png-18.jpg" width="35" height="30" > Hello
+  </a>
+   <ul class="nav navbar-nav navbar-right">
+      <a href="/logout"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+      <form action="/count">
+    </ul>
+</nav>
+
+
+
+<div class="card text-center" style="background: transparent;">
+  <div class="card-header">
+    <ul class="nav nav-pills card-header-pills">
+      <li class="nav-item">
+        <h2>Question And Answer</h2> 
+      </li>
+      <li class="nav-item" style="position: relative; left: 70%;">
+        <a class="nav-link" href="/admin"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
+      </li>
+      <li style="position: relative; left: 70%;"><a class="nav-link" href="/delete"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a></li>
+    </ul>
+</div>
+</div>
+<a href="/admin"><i class="fa fa-backward fa-2x" aria-hidden="true"></i></a>
+
+
+<div class="container">
+
+      
+      <form action="/admin">
+      <% results.forEach(function(question){ %> 
+
+<div class="card text-white bg-secondary mb-3" style="border-color: 2px solid blue;">
+<h4 style="color: yellow;"><%= question.qid %>. <%= question.qname %></h4>
+<div class="card-body"><input type="radio" name="Ans"><%= question.answer1 %> <br>
+<input type="radio" name="Ans"><%= question.answer2 %> <br>
+<input type="radio" name="Ans"><%= question.answer3 %> <br>
+<input type="radio" name="Ans"><%= question.answer4 %> <br>
+<input type="aria-hidden" name="usn" value="answer: <%=question.answer%>"class="btn btn-success" style="position: absolute; left: 88%; bottom: 10%;">
+</div>
+</div>
+  
+<% });   %><br>
+</form>
+</form>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
+

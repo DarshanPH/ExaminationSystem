@@ -1,0 +1,9 @@
+load -> adminhandle
+signup --> registration
+exam --> question
+admin --> admin
+/  --> login
+home --> home
+admin/student --> student
+
+select u.usn,u.fname,u.lname,u.email,u.mblno,sum(a.correct) as sum from users as u,answer as a where u.usn=a.usn GROUP BY a.usn

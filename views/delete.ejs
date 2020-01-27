@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body style="background: linear-gradient(to right, #C7B2F6, #A0F389);">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="stylesheet/js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="https://icon-library.net/images/admin-icon-png/admin-icon-png-18.jpg" width="35" height="30" > Hello
+  </a>
+   <ul class="nav navbar-nav navbar-right">
+      <a href="/"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+    </ul>
+</nav>
+
+<div class="card text-center" style="background: transparent;">
+  <div class="card-header">
+    <ul class="nav nav-pills card-header-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="/admin" style="position: absolute; left: 95%;"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
+      </li>
+      <li style="position: relative; left: 5%;"><h2>Question And Answer</h2></li>
+    </ul>
+</div>
+</div>
+    <a href="/show"><i class="fa fa-backward fa-2x" aria-hidden="true"></i></a>
+<div class="container">
+
+  <div class="card-body" style="border: 1px solid black;">
+    <div class="card-text">
+      
+      <% results.forEach(function(question){ %> 
+
+      <!-- <form action="/delete/<%=question.qid%>" method="POST"> -->
+
+<!-- <input type="submit" name="qid" value="Delete" id="<%= question.qid %>"> -->
+<h4 style="color:green"><%= question.qid %>. <%= question.qname %></h4><a class="nav-link"></a>
+
+<input type="radio" name="Ans"><%= question.answer1 %> <br>
+<input type="radio" name="Ans"><%= question.answer2 %> <br>
+<input type="radio" name="Ans"><%= question.answer3 %> <br>
+<input type="radio" name="Ans"><%= question.answer4 %> <br>
+<br>
+
+<a href="/delete/<%= question.qid %>" class="btn btn-danger"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+ <!--  <button type="submit"></button> -->
+<% });   %><br>
+
+  </div>
+</div>
+
+
+</body>
+</html>
+

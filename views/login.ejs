@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<link rel="stylesheet" type="text/css" href="stylesheet/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+<body style="background-color: #cccccc">
+
+<style type="text/css">
+    body,html{
+        background-image: url("https://images.unsplash.com/photo-1549122728-f519709caa9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80");
+       /* width: 100%;
+        height: 100%;*/
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+
+
+</style>
+
+<nav class="navbar">
+    <h3> Online Examination System </h3>
+	<a href="handle">Admin</a>
+	
+</nav>
+<div class="line" style="background-color: white; width: 100%; height: 5px;"></div><br>
+
+<!-- <div class="container">
+  <div class="row">
+	<div class="card card-signin my5">
+  <div class="card-header" style="background-color: green; color: white;">
+    <h3>Please Login Here</h3>
+  </div>
+  <div class="card-body">
+    <form action="/login" method="POST">
+
+
+	<span class="add-on"><i class="fa fa-user"></i></span>
+<input type="text" name="username" id="username" placeholder="username">
+<span class="add-on"><i class="fa fa-key"></i></span>
+<input type="password" name="password" id="password" placeholder="password">
+<button class="btn btn-primary">Submit</button>
+    <p class="card-text">New Student <a href="signup">SignUp </a> Here</p>
+   </form>
+  </div>
+</div>
+</div>
+</div> -->
+<form action="/login" method="POST" style="margin-left: 30%;">
+<div class="container content_container login">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12 col-xs-offset-0">
+                <form name="login_form" id="login_form" method="post" action="https://account.genndi.com/login" class="form_login">
+                    <div class="white_block">
+                    
+                    <header class="clearfix">
+                        <h3 class="pull-left"><u>Plase Sign In Here</u></h3>
+                    </header>
+                    <div class="block-inner">
+                        <div class="form-group">
+                            <label>
+                                Username
+                            </label>
+                           <i class="fa fa-user"></i> <input type="text" name="username" class="required form-control" value="" placeholder="Enter your username..." required>
+                        </div>
+                        <div class="form-group w_margin">
+                            <label>
+                                Password
+                            </label>
+                            <i class="fa fa-key"></i><input name="password" type="password" class="required form-control" style="" placeholder="Enter your password..." required>
+                        </div>
+                         <div class="form-group w_margin">
+                            <label>
+                                Enter USN
+                            </label>
+                            <i class="fa fa-bell" aria-hidden="true"></i><input name="usn" type="password" class="required form-control" style="" placeholder="Enter your usn" required>
+                        </div>
+                        <button type="submit" class="btn btn-black_new btn-large btn-block btn-error text-uppercase "  id="submit_login" style="background-color: black;color: white;">
+                            <span class="btn-title">Sign in</span>
+                            <span id="countdown-wrapper" class="circle-outline" style="display: none;">
+                                <span id="countdown">3</span>
+                            </span>
+                        </button>
+                    </div>
+                    </div>
+                    <a href="signup" class="pull-left" style="color: white;">
+                       <b> Create a new account </b>
+                    </a>
+                    <a href="update" class="pull-right" style="color: white;">
+                       <b> Update Password </b>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+  </form>
+
+
+
+	
+
+
+</body>
+</html>

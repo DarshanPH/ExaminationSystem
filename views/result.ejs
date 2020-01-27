@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body style="background: linear-gradient(to right, #C7B2F6, #A0F389">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <nav class="navbar"> Your Result
+    <i class="fa fa-sign-out fa-lg" aria-hidden="true"><a href="/logout">Sign Out</a></i></nav>
+</nav>
+<div class="line" style="background-color: black; width: 100%; height: 5px;"></div><br>
+
+      <div class="card text-white bg-dark mb-3 text-center" style="background-color: transparent; border-color: black;">
+        <div class="card-header"><b style="font-size: 25px;"> Result<b></div></div>
+
+          <!-- <a href="/admin/score" value="student score" class="btn btn-success" style="position: absolute; left: 88%; bottom: 80%;">Student Score</a> -->
+          
+
+
+        <div class="container">
+
+<% result.forEach(function(question){ %> <br>
+
+  <div class="card text-white bg-info mb-3" style="border-color: 2px solid blue;">
+  <h5 class="card-header"><%= question.fname %> <%= question.lname %></h5>
+  <div class="card-body"><h style="color: Red"> Taken Marks:  </h><%=question.sum%>/20
+    <div class="card-text"><h style="color: yellow"> Student Usn: </h><%=question.usn%></div>
+
+    <div class="card-text"><h style="color: yellow"> Email </h><%= question.email %></div>
+    <p class="card-text"><b><h style="color: yellow"> Mobile number:</h><%= question.mblno %></b></p>
+  </div>
+  <input type="aria-hidden" name="usn" value="<%=question.usn%>" id="<%=question.usn%>" class="btn btn-success" style="position: absolute; left: 88%; bottom: 80%;">
+</div>
+
+   <% });  %>
+
+
+
+
+</div>
+
+</body>
+</html>
+
+
+

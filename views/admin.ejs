@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background: linear-gradient(to right, #C7B2F6, #A0F389);">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="stylesheet/js/bootstrap.min.js"></script>
+
+<nav class="navbar">
+  <a class="navbar-brand" href="#">
+    <img src="https://icon-library.net/images/admin-icon-png/admin-icon-png-18.jpg" width="35" height="30" alt="">
+  </a>
+   <ul class="nav navbar-nav navbar-right">
+    <a href="/logout"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+    </ul>
+</nav>
+<div class="line" style="background-color: black; width: 100%; height: 5px;"></div><br>
+
+
+<div class="" style="max-width: 18rem; position: absolute; left: 70%; bottom: 60%; background-color: transparent;">
+  <div class=""></div>
+  <div class="card-body">
+    <p class="card-text"><iframe src="/count"></iframe></p>
+  </div>
+</div>
+
+<form action="/admin" method="POST">
+		<a href="/load"><i class="fa fa-backward fa-2x" aria-hidden="true"></i></a>
+
+
+<div class="container">
+ 
+
+        <div class="card" style="background: transparent;">
+  <div class="card-header">
+    <b style="font-size: 30px; color: green;">Enter Question And Answer Below</b><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+  </div>
+  <div class="card-body">
+  	<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="qid"><b>Qusetion Number <i class="fa fa-list-ol" aria-hidden="true"></i></b></label>
+      <input type="Number" name="qid" placeholder="Enter Question Number" class="form-control" required>
+    </div>
+
+    <div class="form-group col-md-6">
+    	  <label for="qname"><b>Question Name <i class="fa fa-pencil" aria-hidden="true"></i></b></label>
+    		<input type="text" required name="qname" id="qname" placeholder="Enter Question Name" class="form-control">
+    	</div>
+    </div>
+
+    <div class="row">
+    	<div class="form-group col-md-6">
+    	  <label for="answer1"><b>First Answer <i class="fa fa-pencil" aria-hidden="true"></i></b></label>
+			<input type="text" name="answer1" id="answer1" placeholder="Enter 1st Answer" class="form-control" required>
+    	</div>
+
+    	<div class="form-group col-md-6">
+    	  <label for="answer2"><b>Second Answer <i class="fa fa-pencil" aria-hidden="true"></i></b></label>
+    	  	<input type="text" name="answer2" id="answer2" placeholder="Enter 2nd Answer" class="form-control" required>
+    	</div>
+    </div>
+
+     <div class="row">
+    	<div class="form-group col-md-6">
+    	  <label for="answer3"><b>Third Answer <i class="fa fa-pencil" aria-hidden="true"></i></b></label>
+    	  	<input type="text" name="answer3" id="answer3" placeholder="Enter 3rd Answer" class="form-control" required>
+    	</div>
+    	
+    	<div class="form-group col-md-4">
+    	  <label for="answer4"><b>Fourth Answer <i class="fa fa-pencil" aria-hidden="true"></i></b></label>
+    	  	<input type="text" name="answer4" id="answer4" placeholder="Enter 4th Answer" class="form-control" required>
+    	</div>
+
+    	<div class="form-group col-md-2">
+    	  <label for="correct"><b>Correct Answer <i class="fa fa-pencil" aria-hidden="true"></i></b></label>
+    	  	<input type="Number" name="correct" id="correct" placeholder="Enter Correct Answer" class="form-control" required>
+    	</div>
+
+	<div class="form-group col-md-6">
+		<button class="btn btn-secondary btn-lg" style="margin-left: 2%;">submit</button>
+	</div>
+
+  <div class="form-group col-md-4"></div>
+    <div class="form-group col-md-2">
+         <a href="/show" class="btn btn-success">Show Question</a>
+	</form>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

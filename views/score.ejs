@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body style="background: linear-gradient(to right, #C7B2F6, #A0F389">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <nav class="navbar">
+  <a class="navbar-brand" href="#">
+    <img src="https://icon-library.net/images/admin-icon-png/admin-icon-png-18.jpg" width="35" height="30" alt="">
+  </a>
+   <ul class="nav navbar-nav navbar-right">
+    <a href="/"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+    </ul>
+</nav>
+<div class="line" style="background-color: black; width: 100%; height: 5px;"></div><br>
+
+
+      <div class="card text-white bg-dark mb-3 text-center" style="background-color: transparent; border-color: black;">
+        <div class="card-header"><b style="font-size: 25px;"> Student Details <b></div></div>
+          <a href="/admin/student"><i class="fa fa-backward fa-2x" aria-hidden="true"></i></a>
+
+          <a href="/score" class="btn btn-success" style="position: absolute; left: 88%; bottom: 80%;">Student Score</a>
+          
+
+
+<form action="/admin/score">
+        <div class="container">
+<% results.forEach(function(question){ %> <br>
+
+<h1>Student USN: <%=question.usn%></h1>
+
+<h1>Total marks taken: <%=question.sum%>/20</h1>
+<h1>First Name: <%=question.fname%></h1>
+<h1>Middle Name: <%=question.mname%></h1>
+<h1>Last Name: <%=question.lname%></h1>
+<h1>Email Address: <%=question.email%></h1>
+<%});%>
+  </div>
+</div>
+
+   <% });  %>
+
+
+
+
+
+
+
+</form>
+
+</div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,32 @@
+mysql> create table answer(id int primary key auto_increment,usn varchar(20),qid int,correct int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc answer;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| id      | int(11)     | NO   | PRI | NULL    | auto_increment |
+| usn     | varchar(20) | YES  |     | NULL    |                |
+| qid     | int(11)     | YES  |     | NULL    |                |
+| correct | int(11)     | YES  |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> alter table answer add constraint foreign key(qid) references question(qid);
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table answer add constraint foreign key(usn) references users(usn);
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc answer;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| id      | int(11)     | NO   | PRI | NULL    | auto_increment |
+| usn     | varchar(20) | YES  | MUL | NULL    |                |
+| qid     | int(11)     | YES  | MUL | NULL    |                |
+| correct | int(11)     | YES  |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
